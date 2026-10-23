@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nível Difícil · Pergunta 2 · Floresta do Aprender</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Nível Difícil · Pergunta 2 de 6 -->
+  <main class="screen" id="play">
+    <div class="stage">
+      <div class="topbar">
+        <a class="icon-btn" href="niveis.html" aria-label="Voltar para os níveis">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#2B2118" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg>
+        </a>
+        <span class="pill">Pergunta 2 de 6</span>
+        <button class="icon-btn" id="btnSom" aria-label="Ouvir a pergunta">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#2B2118" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9h4l5-4v14l-5-4H4z" fill="#2B2118"/><path d="M16.5 8.5a5 5 0 0 1 0 7M19 6a8.5 8.5 0 0 1 0 12"/></svg>
+        </button>
+      </div>
+
+      <div class="scene">
+        <div class="sc fruits"><span>🥕</span><span>🍇</span><span>🥦</span></div>
+      </div>
+
+      <div class="question" id="pergunta">“Qual desses alimentos é verde?”</div>
+
+      <div class="answers">
+        <button class="ans choice"><span class="emo" aria-hidden="true">🥕</span><span>Cenoura</span></button>
+        <button class="ans choice"><span class="emo" aria-hidden="true">🍇</span><span>Uva</span></button>
+        <button class="ans choice" data-correta><span class="emo" aria-hidden="true">🥦</span><span>Brócolis</span></button>
+      </div>
+    </div>
+  </main>
+
+  <!-- Tela 6: pop-up de acerto -->
+  <div class="overlay ok" id="acerto" role="dialog" aria-modal="true" aria-labelledby="acertoTexto" hidden>
+    <div class="dialog">
+      <div class="mascot"><img src="mascote.svg" alt=""></div>
+      <p id="acertoTexto">Isso mesmo! Você acertou a resposta correta!</p>
+      <a class="btn" href="dificil-3.html">Continuar</a>
+    </div>
+  </div>
+
+  <!-- Tela 7: pop-up de erro -->
+  <div class="overlay try" id="erro" role="dialog" aria-modal="true" aria-labelledby="erroTexto" hidden>
+    <div class="dialog">
+      <div class="mascot"><img src="mascote.svg" alt=""></div>
+      <p id="erroTexto">Vamos olhar de novo? Você vai achar a resposta certa!</p>
+      <button class="btn orange" id="btnTentar">Tentar de novo</button>
+    </div>
+  </div>
+
+  <script src="jogo.js"></script>
+</body>
+</html>
